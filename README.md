@@ -1,3 +1,5 @@
+
+
 # Сокращатель URL на FastAPI
 
 Это сервис сокращения URL, построенный на FastAPI, с аутентификацией пользователей, управлением ссылками и кэшированием через Redis. Проект включает юнит-тесты, анализ покрытия кода и нагрузочные тесты с помощью Locust.
@@ -45,6 +47,7 @@ FastAPI_project/
 ├── requirements.txt    # Зависимости Python
 
 └── README.md           # Этот файл
+![image](https://github.com/user-attachments/assets/b1e9d544-3e05-44d8-874d-0d948bbb2a40)
 
 
 text
