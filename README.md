@@ -3,27 +3,49 @@
 Это сервис сокращения URL, построенный на FastAPI, с аутентификацией пользователей, управлением ссылками и кэшированием через Redis. Проект включает юнит-тесты, анализ покрытия кода и нагрузочные тесты с помощью Locust.
 
 ## Структура проекта
+
 FastAPI_project/
+
 ├── app/
+
 │   ├── init.py
+
 │   ├── auth.py         # Логика аутентификации (JWT, хеширование паролей)
+
 │   ├── cashe.py        # Утилиты для кэширования в Redis
+
 │   ├── database.py     # Конфигурация базы данных SQLAlchemy
+
 │   ├── main.py         # Приложение FastAPI и эндпоинты
+
 │   ├── models.py       # Модели ORM SQLAlchemy
+
 │   └── schemas.py      # Схемы Pydantic для валидации
+
 ├── tests/
+
 │   ├── init.py
+
 │   ├── conftest.py     # Фикстуры Pytest (SQLite, замокированный Redis)
+
 │   ├── test_auth.py    # Тесты аутентификации
+
 │   ├── test_links.py   # Тесты управления ссылками
+
 │   ├── test_utils.py   # Тесты утилитарных функций
+
 │   └── locustfile.py   # Нагрузочные тесты с Locust
+
 ├── .env                # Переменные окружения
+
 ├── Dockerfile          # Конфигурация Docker для веб-сервиса
+
 ├── docker-compose.yml  # Docker Compose для веб, PostgreSQL и Redis
+
 ├── requirements.txt    # Зависимости Python
+
 └── README.md           # Этот файл
+
 
 text
 
@@ -285,11 +307,9 @@ def test_client():
     yield client
     Base.metadata.drop_all(bind=engine)
 Перезапустите тесты: pytest tests/ -v.
-Улучшение покрытия:
-Добавьте тесты для эндпоинтов PUT /links/{short_code}, DELETE /links/{short_code}, GET /links/{short_code}/stats в test_links.py.
-Мониторинг Locust:
-Анализируйте метрики (RPS, время ответа, ошибки) в веб-интерфейсе Locust. При ошибках проверяйте логи Docker.
+
 Итог
+
 Юнит-тесты: 100% пройдены (8/8).
-Покрытие кода: 82%, с возможностью улучшения.
+Покрытие кода: 82%.
 Нагрузочные тесты: Locust запущен, готов к тестированию производительности.
