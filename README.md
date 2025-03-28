@@ -313,3 +313,9 @@ def test_client():
 Юнит-тесты: 100% пройдены (8/8).
 Покрытие кода: 82%.
 Нагрузочные тесты: Locust запущен, готов к тестированию производительности.
+
+![image](https://github.com/user-attachments/assets/7f15e7d7-3fec-462a-8c54-f0bcc519bcfc)
+
+![image](https://github.com/user-attachments/assets/3e9a36db-8ece-429e-ac42-f7114c63206e)
+
+
